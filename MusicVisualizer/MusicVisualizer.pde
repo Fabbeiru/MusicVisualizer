@@ -104,6 +104,9 @@ void showHelp() {
   textAlign(LEFT);
   textSize(20);
   text("> Press ENTER to select a song.", -580, -350);
+  text("> Press F to fast forward through the song.", -580, -300);
+  text("> Press B to rewind through the song.", -580, -250);
+  text("> Press R to start over the song.", -580, -200);
   textAlign(CENTER);
 }
 
@@ -112,4 +115,8 @@ void keyPressed() {
     song.pause();
     selectInput("Select a song", "selectSong");
   }
+  if (key == 'F' || key == 'f') song.skip(1000);
+  if (key == 'B' || key == 'b') song.skip(-1000);
+  if (key == 'R' || key == 'r') song.rewind();
+  if (key == 'P' || key == 'p') song.pause();
 }
