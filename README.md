@@ -20,6 +20,9 @@ Aprovechando que el lenguaje de programación que utiliza el IDE Processing por 
 ## Descarga y prueba
 Para poder probar correctamente el código, descargar los ficheros (el .zip del repositorio) y en la carpeta llamada MusicVisualizer se encuentran los archivos de la aplicación listos para probar y ejecutar. El archivo "README.md" y aquellos fuera de la carpeta del proyecto (MusicVisualizer), son opcionales, si se descargan no deberían influir en el funcionamiento del código ya que, son usados para darle formato a la presentación y explicación del repositorio en la plataforma GitHub.
 
+Adicionalmente, dado que se ha usado una librería adicional en esta práctica, para probarla será necesario:
+* Añadir e importar las librerías Minim y Sound en Processing.
+
 ## Recursos empleados
 Para la realización de este sistema planetario en 3D, se han consultado y/o utilizado los siguientes recursos:
 * Guión de prácticas de la asignatura CIU
@@ -29,3 +32,5 @@ Para la realización de este sistema planetario en 3D, se han consultado y/o uti
 
 Por otro lado, las librerías empleadas fueron:
 * <a href="https://github.com/extrapixel/gif-animation">GifAnimation</a> de Patrick Meister.
+* Minim de Damien Di fede & Anderson Mills.
+* Sound de The Processing Foundation.
