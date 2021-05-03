@@ -172,6 +172,6 @@ Para la realización de este sistema planetario en 3D, se han consultado y/o uti
 * Micrófono o archivos de música.
 
 Por otro lado, las librerías empleadas fueron:
-* <a href="https://github.com/extrapixel/gif-animation">GifAnimation</a> de Patrick Meister</a>.
-* <a href="http://code.compartmental.net/minim/">Minim de Damien Di fede & Anderson Mills</a>.
-* <a href="https://processing.org/reference/libraries/sound/">Sound de The Processing Foundation</a>.
+* <a href="https://github.com/extrapixel/gif-animation">GifAnimation</a> de Patrick Meister.
+* <a href="http://code.compartmental.net/minim/">Minim</a> de Damien Di fede & Anderson Mills.
+* <a href="https://processing.org/reference/libraries/sound/">Sound</a> de <a href="https://processingfoundation.org/">The Processing Foundation</a>.
