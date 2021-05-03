@@ -7,7 +7,9 @@ El objetivo de esta práctica de la asignatura de 4to, Creación de Interfaces d
 
 La música empleada en la demostración del funcionamiento de la aplicación es sencilla y no permite apreciar correctamente el efecto visual. Lo ideal sería emplear una canción con mucho contraste de bajos, para obtener así un resultado como el siguiente:
 
-<p align="center"><img src="/Captura.JPG" alt="Music visualizer 2D and 3D model using processing"></img></p>
+MusicVisualizer |
+--------------|
+<img src="/Captura.JPG" alt="Music visualizer 2D and 3D model using processing"></img> |
 
 ## Controles
 Los controles de la aplicación se mostrarán en todo momento por pantalla para facilitar su uso al usuario:
