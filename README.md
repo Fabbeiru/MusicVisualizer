@@ -26,7 +26,7 @@ Aprovechando que el lenguaje de programación que utiliza el IDE Processing por 
 
 ## Explicación
 ### Clase MusicVisualizer
-Esta es la clase principal de la aplicación, la cual gestiona la información mostrada por pantalla al usuario (interfaz gráfica), esto es, el desarrollo de los métodos setup() y draw().
+Esta es la clase principal de la aplicación, la cual gestiona la información mostrada por pantalla al usuario (interfaz gráfica), esto es, el desarrollo de los métodos *setup()* y *draw()*.
 ```java
 void setup () {
   size(1200, 800, P3D);
@@ -61,9 +61,9 @@ void draw () {
   }
 }
 ```
-Como se puede ver, en la función setup(), cargamos e inicializamos todas las variables y objetos que vamos utilizar a lo largo del programa. Además, en la función draw(), controlamos, según los valores de variables booleanas que se manejan según la interacción del usuario con la aplicación, qué se muestra por pantalla como puede ser, el menú, la información sobre el estado de la canción o la ventana para la selección de un nuevo fichero de audio.
+Como se puede ver, en la función *setup()*, cargamos e inicializamos todas las variables y objetos que vamos utilizar a lo largo del programa. Además, en la función *draw()*, controlamos, según los valores de variables booleanas que se manejan según la interacción del usuario con la aplicación, qué se muestra por pantalla como puede ser, el menú, la información sobre el estado de la canción o la ventana para la selección de un nuevo fichero de audio.
 
-Por otra parte, esta misma clase es la que maneja la interacción entre el usuario y la interfaz mediante la implementación del método keyPressed():
+Por otra parte, esta misma clase es la que maneja la interacción entre el usuario y la interfaz mediante la implementación del método *keyPressed()*:
 ```java
 void keyPressed() {
   if (keyCode == ENTER && menu == false) {
