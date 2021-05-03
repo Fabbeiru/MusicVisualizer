@@ -17,8 +17,7 @@ FFT fft;
 
 Circle circle;
 
-float songPosition;
-boolean example;
+boolean example, paused, ended, muted;
 
 PImage bg;
 PFont font;
@@ -29,8 +28,9 @@ void setup () {
   font = loadFont("Consolas-Italic-48.vlw");
   textFont(font);
   circle = new Circle();
-  songPosition = 0.0;
   example = true;
+  ended = false;
+  muted = false;
 }
 
 void draw () {
@@ -39,11 +39,37 @@ void draw () {
   minim = new Minim(this);
   showHelp();
   if (example) exampleSong();
+  infoStatus();
   if (song != null && song.isPlaying()) {
     fft.forward(song.mix);
     beat.detect(song.mix);
     circle.show();
     showTimeLine();
+    ended = false;
+    if (song.position() == song.length()) ended = true;
+  }
+}
+
+void infoStatus() {
+  if (paused) {
+    textSize(50);
+    textAlign(CENTER);
+    text("PAUSED", width/2 - 600, height/2 - 400);
+    textSize(25);
+    text("Press SPACEBAR to continue.", width/2 - 600, height/2 - 350);
+  }
+  if (ended) {
+    textSize(50);
+    textAlign(CENTER);
+    text("END OF SONG", width/2 - 600, height/2 - 400);
+    textSize(25);
+    text("Please select another song or press R to reset", width/2 - 600, height/2 - 350);
+    text("and then SPACEBAR to start over the current song.", width/2 - 600, height/2 - 300);
+  }
+  if (muted) {
+    textSize(50);
+    textAlign(CENTER);
+    text("MUTED", width/2 - 600, height/2 - 400);
   }
 }
 
@@ -104,9 +130,12 @@ void showHelp() {
   textAlign(LEFT);
   textSize(20);
   text("> Press ENTER to select a song.", -580, -350);
-  text("> Press F to fast forward through the song.", -580, -300);
-  text("> Press B to rewind through the song.", -580, -250);
-  text("> Press R to start over the song.", -580, -200);
+  text("> Press P to pause the song.", -580, -300);
+  text("> Press M to mute / unmute the song.", -580, -250);
+  text("> Press F to fast forward through the song.", -580, -200);
+  text("> Press B to rewind through the song.", -580, -150);
+  text("> Press R to start over the song.", -580, -100);
+  text("> Press ESC to exit.", -580, -50);
   textAlign(CENTER);
 }
 
@@ -118,5 +147,22 @@ void keyPressed() {
   if (key == 'F' || key == 'f') song.skip(1000);
   if (key == 'B' || key == 'b') song.skip(-1000);
   if (key == 'R' || key == 'r') song.rewind();
-  if (key == 'P' || key == 'p') song.pause();
+  if (key == 'M' || key == 'm') {
+    if (song.isMuted()) {
+      song.unmute();
+      muted = false;
+    }
+    else {
+      song.mute();
+      muted = true;
+    }
+  }
+  if (key == 'P' || key == 'p') {
+    song.pause();
+    paused = true;
+  }
+  if (key == ' ' || key == ' ') {
+    song.play();
+    paused = false;
+  }
 }
