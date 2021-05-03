@@ -9,7 +9,7 @@ La música empleada en la demostración del funcionamiento de la aplicación es 
 
 MusicVisualizer |
 --------------|
-<img src="/Captura.JPG" alt="Music visualizer 2D and 3D model using processing"></img> |
+<img size="50%" src="/Captura.JPG" alt="Music visualizer 2D and 3D model using processing"></img> |
 
 ## Controles
 Los controles de la aplicación se mostrarán en todo momento por pantalla para facilitar su uso al usuario:
