@@ -165,7 +165,7 @@ Adicionalmente, dado que se ha usado una librería adicional en esta práctica, 
 * Añadir e importar las librerías Minim y Sound en Processing.
 
 ## Recursos empleados
-Para la realización de este sistema planetario en 3D, se han consultado y/o utilizado los siguientes recursos:
+Para la realización de este proyecto, se han consultado y/o utilizado los siguientes recursos:
 * Guión de prácticas de la asignatura CIU
 * <a href="https://processing.org">Página de oficial de Processing y sus referencias y ayudas</a>
 * Processing IDE
